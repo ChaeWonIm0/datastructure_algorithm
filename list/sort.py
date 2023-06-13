@@ -11,4 +11,4 @@ def solution(nums, target):
             return True    
     return False
 
-print(solution(nums=[1,5,2,6,1,7,3,8,15], target = 10))
+print(solution(nums=[1,5,2,6,1,7,3,8,15], target = 100))
