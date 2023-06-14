@@ -8,6 +8,15 @@ class LinkedList(object):
         self.head = None
     def append(self, value):
         new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        # 맨뒤의 node가 new_node를 가리켜야 함
+        else:
+            current = self.head
+            while(current.next):
+                current = current.next
+            current.next = new_node
+
 
 ll = LinkedList()
 ll.append(1)
@@ -15,3 +24,20 @@ ll.append(2)
 ll.append(3)
 ll.append(4)
 print(ll)
+
+class LinkedList(object):
+    def __init__(self):
+        self.head = None
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        else:
+            ptr =  self.head
+            while(ptr.next):
+                ptr = ptr.next
+            ptr.next = self.current = new_node
+
+linkedlist = LinkedList()
+linkedlist.delete(linkedlist)
+print(linkedlist)
