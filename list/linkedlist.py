@@ -33,11 +33,10 @@ class LinkedList(object):
         if self.head is None:
             self.head = new_node
         else:
-            ptr =  self.head
-            while(ptr.next):
-                ptr = ptr.next
-            ptr.next = self.current = new_node
+            front = self.head
+            while(front.next):
+                front = front.next
+            front.next = new_node
 
 linkedlist = LinkedList()
-linkedlist.delete(linkedlist)
-print(linkedlist)
+linkedlist.append(1)
