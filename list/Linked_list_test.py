@@ -13,14 +13,12 @@ class BrowserHistory(object):
 
     def __init__(self, homepage):
         # self.head = None
-        # self.tail = None
-        self.head = self.current = Node(url = homepage)
+        self.head = self.tail = Node(url = homepage)
         # self.head = new_node        
 
     def visit(self, url) -> None:
         # new_node = Node(url)
         # self.head = None
-        # self.tail = None
         # alist = []
         # alist.append(new_node)
         # if self.head is None:
