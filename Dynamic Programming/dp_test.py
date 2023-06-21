@@ -18,14 +18,15 @@ class Solution:
             q.append(i)
         while q:
             current_visited = q.popleft()
+            sumlist = []
             for i in len_list:
                 for j in len_list2:
                     if cost[j] < cost[i]:
-                        current_visited += current_visited
+                        pass
                     if cost[i] < cost[j]:
-                        current_visited += 0
-                    current_visited += current_visited
-            return current_visited
+                        current_visited = q.popleft()
+                    sumlist.append(current_visited)
+            return sum(sumlist)
 S = Solution
 cost = [10, 15, 20]
 S.minCostClimbingStairs(S, cost)
